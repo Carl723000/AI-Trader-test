@@ -1,0 +1,49 @@
+{
+  "description": "Live trading configuration for Binance cryptocurrency trading",
+
+  "trading_mode": "paper",
+  "broker_type": "binance",
+
+  "model": {
+    "name": "claude-3.7-sonnet",
+    "basemodel": "anthropic/claude-3.7-sonnet",
+    "enabled": true
+  },
+
+  "risk_controls": {
+    "enable_max_single_trade": true,
+    "max_single_trade_pct": 0.10,
+
+    "enable_max_position": true,
+    "max_position_pct": 0.25,
+
+    "enable_max_daily_trades": true,
+    "max_daily_trades": 100,
+
+    "enable_max_daily_loss": true,
+    "max_daily_loss_pct": 0.05,
+
+    "enable_min_position_size": true,
+    "min_position_value": 10.0,
+
+    "enable_trading_hours": false,
+
+    "enable_emergency_stop": true
+  },
+
+  "trading_config": {
+    "max_iterations": 1000,
+    "iteration_wait_seconds": 30,
+    "enable_auto_stop_loss": true,
+    "stop_loss_pct": 0.10
+  },
+
+  "log_path": "data/live_logs_crypto",
+
+  "notification": {
+    "enable_email": false,
+    "email_address": "",
+    "enable_webhook": false,
+    "webhook_url": ""
+  }
+}

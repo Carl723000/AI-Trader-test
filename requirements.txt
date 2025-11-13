@@ -4,3 +4,14 @@ langchain-mcp-adapters>=0.1.0
 fastmcp==2.12.5
 
 tushare
+
+# Live Trading Dependencies
+aiohttp>=3.9.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Optional: For advanced features
+# alpaca-py>=0.8.0  # Official Alpaca Python SDK (alternative)
+# python-binance>=1.0.19  # Official Binance Python SDK (alternative)

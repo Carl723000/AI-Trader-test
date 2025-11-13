@@ -1,0 +1,50 @@
+{
+  "description": "Live trading configuration - Use for real-time trading with actual accounts",
+
+  "trading_mode": "paper",
+  "broker_type": "alpaca",
+
+  "model": {
+    "name": "claude-3.7-sonnet",
+    "basemodel": "anthropic/claude-3.7-sonnet",
+    "enabled": true
+  },
+
+  "risk_controls": {
+    "enable_max_single_trade": true,
+    "max_single_trade_pct": 0.10,
+
+    "enable_max_position": true,
+    "max_position_pct": 0.30,
+
+    "enable_max_daily_trades": true,
+    "max_daily_trades": 50,
+
+    "enable_max_daily_loss": true,
+    "max_daily_loss_pct": 0.05,
+
+    "enable_min_position_size": true,
+    "min_position_value": 10.0,
+
+    "enable_trading_hours": false,
+    "trading_hours": [9, 16],
+
+    "enable_emergency_stop": true
+  },
+
+  "trading_config": {
+    "max_iterations": 1000,
+    "iteration_wait_seconds": 60,
+    "enable_auto_stop_loss": true,
+    "stop_loss_pct": 0.15
+  },
+
+  "log_path": "data/live_logs",
+
+  "notification": {
+    "enable_email": false,
+    "email_address": "",
+    "enable_webhook": false,
+    "webhook_url": ""
+  }
+}
